@@ -66,12 +66,13 @@ body {
   gap: 2rem;
   flex-wrap: nowrap;
   scroll-snap-type: x mandatory;
-  overflow-x: auto; /* added to enable horizontal scroll */
+  overflow-x: auto; /* enable horizontal scrolling */
 }
 
 .milestone {
   flex: 0 0 calc((100% - 3 * 2rem) / 4); /* 4 cards visible, accounting for gaps */
   scroll-snap-align: start;
+  min-width: auto; /* override old min-width */
 }
 
 .card {
@@ -129,7 +130,8 @@ body {
 
   .milestone {
     width: 100%;
-    flex: none; /* reset flex on mobile for vertical stack */
+    flex: none; /* reset flex on mobile for vertical stacking */
+    min-width: auto; /* ensure no min-width restriction */
   }
 
   .card img {
@@ -163,4 +165,5 @@ body {
     box-shadow: 0 0 40px rgba(0, 194, 255, 0.5);
   }
 }
+
 
