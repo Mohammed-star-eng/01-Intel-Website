@@ -2,14 +2,14 @@
 
 :root {
   --intel-blue: #0071c5;
-  --intel-blue-soft: #6aaedf;
+  --intel-blue-soft: #5aa6dc;
   --sustain-green: #2e8b57;
   --light-sky: #e6f3f9;
   --bright-green: #6fbf73;
   --highlight-yellow: #ffd700;
   --text-color: #1a1a1a;
   --white: #ffffff;
-  --bg-gradient: linear-gradient(90deg, var(--intel-blue) 0%, var(--intel-blue-soft) 100%);
+  --bg-gradient: var(--intel-blue-soft);
   --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --transition-speed: 0.3s;
 }
@@ -105,7 +105,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 50, 100, 0.55);
+  background: rgba(0, 45, 95, 0.75);
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 0;
@@ -132,14 +132,14 @@ body {
   margin-bottom: 0.75rem;
   font-weight: 900;
   color: var(--white);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   line-height: 1.1;
 }
 
 .hero-text p {
   font-size: 1.3rem;
   color: var(--white);
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
 }
 
