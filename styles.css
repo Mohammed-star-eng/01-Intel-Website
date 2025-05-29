@@ -1,9 +1,12 @@
 :root {
   --intel-blue: #0071c5;
-  --intel-dark: #003865;
-  --intel-light: #e6f2fb;
-  --text-color: #1a1a1a;
-  --card-bg: #ffffff;
+  --intel-dark: #001f3f;
+  --intel-glow: #00cfff;
+  --text-color: #f0f0f0;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --accent-bg: #002b55;
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
 }
 
 * {
@@ -13,94 +16,136 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto);
+  background: linear-gradient(180deg, #000, var(--accent-bg));
   color: var(--text-color);
-  background-color: #f9f9f9;
+  overflow-x: hidden;
 }
 
-header {
-  background: linear-gradient(135deg, var(--intel-blue), var(--intel-dark));
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-header img {
-  width: 120px;
-  margin-bottom: 1rem;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-}
-
-.timeline-container {
-  overflow-x: auto;
+.hero {
+  position: relative;
+  height: 100vh;
   display: flex;
-  gap: 1rem;
-  padding: 2rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.timeline-container::-webkit-scrollbar {
-  display: none;
-}
-
-.milestone {
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  flex: 0 0 300px;
-  scroll-snap-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at center, var(--intel-blue), #000);
+  text-align: center;
   overflow: hidden;
 }
 
-.milestone:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
+  opacity: 0.05;
+  z-index: 1;
 }
 
-.milestone img {
+.logo {
+  width: 120px;
+  z-index: 2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  z-index: 2;
+  color: var(--intel-glow);
+}
+
+.hero-text h1 {
+  font-family: var(--font-orbitron);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px var(--intel-glow);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #cceeff;
+}
+
+.timeline-container {
+  padding: 4rem 1rem;
+  overflow-x: auto;
+}
+
+.timeline {
+  display: flex;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: var(--intel-glow);
+  border-radius: 10px;
+}
+
+.milestone {
+  scroll-snap-align: center;
+  flex: 0 0 320px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: transform 0.4s, box-shadow 0.4s;
+  backdrop-filter: blur(6px);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.milestone .content {
+.card-content {
   padding: 1rem;
 }
 
-.milestone .details {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+.card-content h3 {
+  font-family: var(--font-orbitron);
+  color: var(--intel-glow);
+  margin-bottom: 0.5rem;
 }
 
-.milestone:hover .details {
-  max-height: 200px;
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #e0f7ff;
+}
+
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.card:hover .details {
+  max-height: 150px;
   margin-top: 0.5rem;
 }
 
-.milestone h3 {
-  margin-bottom: 0.5rem;
-  color: var(--intel-blue);
-}
-
-.milestone p {
-  font-size: 0.95rem;
-}
-
 @media (max-width: 768px) {
-  .timeline-container {
+  .timeline {
     flex-direction: column;
-    overflow-x: hidden;
+    align-items: center;
   }
 
   .milestone {

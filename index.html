@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intel Sustainability Journey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg" alt="Intel Logo" />
-    <h1>Intel's Environmental Sustainability Journey</h1>
-    <p>From founding to future: Innovating sustainably, leading responsibly.</p>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg" alt="Intel Logo" class="logo">
+    <div class="hero-text">
+      <h1>Blueprints of Tomorrow</h1>
+      <p>Intel's Environmental Journey from Silicon to Sustainability</p>
+    </div>
   </header>
 
-  <section class="timeline-container">
-    <div class="milestone">
-      <img src="/images/milestone1.jpg" alt="Foundation" />
-      <div class="content">
-        <h3>1968 – Foundation</h3>
-        <p>Intel is founded with a spirit of innovation and responsibility.</p>
-        <div class="details">
-          <p>Though sustainability wasn’t a buzzword then, Intel’s early manufacturing focused on quality and reducing waste.</p>
+  <!-- TIMELINE -->
+  <main class="timeline-container">
+    <div class="timeline">
+
+      <!-- MILESTONE CARD -->
+      <div class="milestone">
+        <div class="card">
+          <img src="/images/milestone1.jpg" alt="1968 Foundation">
+          <div class="card-content">
+            <h3>1968 – Foundation</h3>
+            <p>Founded with a mission of innovation—Intel begins with a commitment to precision manufacturing.</p>
+            <div class="details">
+              <p>Even in its earliest chip fabrication plants, Intel minimized waste and maximized resource reuse.</p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Repeat above .milestone block 8 more times for each key event -->
+
     </div>
-    <!-- Duplicate and modify the .milestone block for each of the 9 milestones -->
-    <!-- Replace image src with AI-generated images aligned with each milestone content -->
-  </section>
+  </main>
 </body>
 </html>
