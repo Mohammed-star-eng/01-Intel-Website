@@ -1,15 +1,15 @@
 /* Intel Sustainability Journey - Professional Theme */
 
 :root {
-  --intel-blue: #0071c5;
-  --intel-blue-soft: #5aa6dc;
+  --intel-blue: #004a87;
+  --intel-blue-soft: #1c75bc;
   --sustain-green: #2e8b57;
   --light-sky: #e6f3f9;
   --bright-green: #6fbf73;
   --highlight-yellow: #ffd700;
   --text-color: #1a1a1a;
   --white: #ffffff;
-  --bg-gradient: var(--intel-blue-soft);
+  --bg-gradient: var(--intel-blue);
   --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --transition-speed: 0.3s;
 }
@@ -27,7 +27,7 @@ body {
 
 /* === Navbar === */
 .navbar {
-  background: var(--bg-gradient);
+  background: var(--intel-blue);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -36,6 +36,7 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
 }
 
 .nav-logo {
@@ -91,22 +92,22 @@ body {
 /* === Hero Section === */
 .hero {
   position: relative;
-  padding: 6rem 2rem 5rem;
+  min-height: 95vh;
+  padding: 10rem 2rem 6rem;
   text-align: center;
   background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
   color: var(--white);
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  border-radius: 0;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 45, 95, 0.75);
-  mix-blend-mode: overlay;
+  background: rgba(0, 45, 95, 0.85);
+  mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 0;
 }
@@ -128,18 +129,18 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: 3.75rem;
   margin-bottom: 0.75rem;
   font-weight: 900;
   color: var(--white);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   line-height: 1.1;
 }
 
 .hero-text p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--white);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   margin: 0 auto;
 }
 
@@ -147,15 +148,41 @@ body {
 .timeline-container {
   background: #f4f9fc;
   padding: 4rem 2rem 6rem;
+  overflow-x: auto;
+  position: relative;
 }
 
 .timeline {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2.5rem;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  max-width: none;
+  min-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.timeline-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--intel-blue);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.timeline-nav.left {
+  left: 0;
+}
+
+.timeline-nav.right {
+  right: 0;
 }
 
 .milestone {
@@ -216,7 +243,7 @@ body {
 
 /* === Footer === */
 footer.footer {
-  background: var(--bg-gradient);
+  background: var(--intel-blue);
   padding: 2rem 3rem;
   color: var(--white);
   display: flex;
@@ -224,8 +251,7 @@ footer.footer {
   justify-content: space-between;
   align-items: center;
   font-size: 0.95rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: 0;
   box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.15);
 }
 
