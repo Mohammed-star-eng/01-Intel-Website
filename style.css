@@ -1,0 +1,109 @@
+:root {
+  --intel-blue: #0071c5;
+  --intel-dark: #003865;
+  --intel-light: #e6f2fb;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+
+header {
+  background: linear-gradient(135deg, var(--intel-blue), var(--intel-dark));
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.timeline-container {
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.milestone {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 0 0 300px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.milestone:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.milestone img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.milestone .content {
+  padding: 1rem;
+}
+
+.milestone .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.milestone:hover .details {
+  max-height: 200px;
+  margin-top: 0.5rem;
+}
+
+.milestone h3 {
+  margin-bottom: 0.5rem;
+  color: var(--intel-blue);
+}
+
+.milestone p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .milestone {
+    flex: 1 0 auto;
+  }
+}
