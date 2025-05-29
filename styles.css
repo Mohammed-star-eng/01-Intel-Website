@@ -1,163 +1,198 @@
-/* Intel Sustainability Journey - Rich & Elegant Redesign */
+/* Intel Sustainability Journey - Neon Futuristic Design */
 
 :root {
-  --intel-blue: #0057b7;          /* deeper, richer blue */
-  --intel-accent: #0099ff;        /* bright accent */
-  --background-light: #f0f4fa;    /* soft off-white */
-  --background-dark: #e1e8f7;     /* subtle cool gray-blue */
-  --text-primary: #1c2833;        /* dark slate */
-  --text-secondary: #3a4a5a;      /* muted slate */
-  --card-bg: #ffffff;
-  --shadow-light: rgba(0, 87, 183, 0.15);
-  --shadow-hover: rgba(0, 153, 255, 0.3);
+  --background-dark: #0b0f1a;
+  --neon-blue: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #39ff14;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass-blur: 12px;
+  --text-light: #e0e7ff;
+  --shadow-glow: rgba(0, 255, 255, 0.3);
+  --shadow-glow-pink: rgba(255, 0, 255, 0.3);
+  --shadow-glow-green: rgba(57, 255, 20, 0.3);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rubik+Distressed&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--background-light);
-  color: var(--text-primary);
+  font-family: 'Rubik Distressed', cursive, sans-serif;
+  background: var(--background-dark);
+  color: var(--text-light);
   overflow-x: hidden;
+  user-select: none;
 }
 
 .hero {
   position: relative;
+  padding: 7rem 2rem 5rem;
   text-align: center;
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, var(--intel-blue), var(--intel-accent));
-  color: white;
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
-  box-shadow: 0 10px 30px var(--shadow-light);
+  background: linear-gradient(135deg, #001122, #003344);
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  box-shadow: 0 0 30px var(--neon-blue);
 }
 
 .logo {
   width: 110px;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0 8px var(--neon-pink));
+  animation: pulseNeon 3s ease-in-out infinite alternate;
 }
 
 .hero-text h1 {
-  font-weight: 800;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.07em;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--neon-pink);
+  text-shadow:
+    0 0 8px var(--neon-pink),
+    0 0 20px var(--neon-pink),
+    0 0 30px var(--neon-pink);
+  margin-bottom: 0.25rem;
+  user-select: text;
 }
 
 .hero-text p {
-  font-weight: 500;
+  font-family: 'Rubik Distressed', cursive;
   font-size: 1.4rem;
-  max-width: 540px;
+  max-width: 600px;
   margin: 0 auto;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  color: var(--neon-blue);
+  text-shadow: 0 0 6px var(--neon-blue);
+  user-select: text;
 }
 
 .timeline-container {
-  padding: 3.5rem 1rem 5rem;
+  padding: 3rem 1rem 6rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  background: var(--background-dark);
-  box-shadow: inset 0 8px 15px rgba(0, 87, 183, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
+  margin: 3rem auto;
+  max-width: 1250px;
+  backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 0 40px var(--shadow-glow);
 }
 
 .timeline {
   display: flex;
-  gap: 1.8rem;
+  gap: 2rem;
   flex-wrap: nowrap;
   scroll-snap-type: x mandatory;
   overflow-x: auto;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1.5rem;
 }
 
 .milestone {
-  flex: 0 0 calc((100% - 3 * 1.8rem) / 4);
+  flex: 0 0 calc((100% - 3 * 2rem) / 4);
   scroll-snap-align: start;
   min-width: auto;
-  border-radius: 1.5rem;
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 20px var(--shadow-glow),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.milestone:hover {
+  box-shadow:
+    0 0 40px var(--neon-green),
+    inset 0 0 15px rgba(57, 255, 20, 0.2);
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card {
-  background: var(--card-bg);
-  border-radius: 1.5rem;
-  box-shadow: 0 6px 20px var(--shadow-light);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 14px 38px var(--shadow-hover);
+  overflow: hidden;
+  border-radius: 1.75rem;
+  color: var(--text-light);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  filter: brightness(0.85);
+  border-top-left-radius: 1.75rem;
+  border-top-right-radius: 1.75rem;
   transition: filter 0.3s ease;
 }
 
-.card:hover img {
-  filter: brightness(1.1) saturate(1.1);
+.milestone:hover img {
+  filter: brightness(1);
 }
 
 .card-content {
-  padding: 1.5rem 1.75rem;
+  padding: 1.75rem 2rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .card-content h3 {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--intel-accent);
-  margin-bottom: 0.65rem;
-  letter-spacing: 0.03em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: var(--neon-pink);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 10px var(--neon-pink);
 }
 
 .card-content p {
-  font-weight: 400;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
+  font-family: 'Rubik Distressed', cursive;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--neon-blue);
+  text-shadow: 0 0 6px var(--neon-blue);
   flex-grow: 1;
 }
 
 .details {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
-  font-size: 0.95rem;
+  transition: max-height 0.6s ease;
+  font-size: 1rem;
   margin-top: 1rem;
-  color: var(--text-primary);
+  color: var(--neon-green);
+  text-shadow: 0 0 8px var(--neon-green);
 }
 
-.card:hover .details {
-  max-height: 200px;
+.milestone:hover .details {
+  max-height: 220px;
+}
+
+@keyframes pulseNeon {
+  0% {
+    filter: drop-shadow(0 0 6px var(--neon-pink));
+  }
+  100% {
+    filter: drop-shadow(0 0 18px var(--neon-pink));
+  }
 }
 
 @media (max-width: 992px) {
   .milestone {
-    flex: 0 0 calc((100% - 2 * 1.8rem) / 3);
+    flex: 0 0 calc((100% - 2 * 2rem) / 3);
   }
 }
 
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.6rem;
   }
 
   .milestone {
@@ -166,37 +201,37 @@ body {
   }
 
   .card img {
-    height: 200px;
+    height: 220px;
   }
 
   .hero-text h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 
   .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
 footer.footer {
-  background: var(--intel-blue);
-  padding: 1.8rem 2.5rem;
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+  padding: 2rem 2.5rem;
   color: white;
+  font-family: 'Orbitron', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.95rem;
-  gap: 0.6rem;
-  border-top-left-radius: 1.2rem;
-  border-top-right-radius: 1.2rem;
-  box-shadow: 0 -8px 20px rgba(0, 87, 183, 0.4);
+  font-size: 1rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  box-shadow: 0 -8px 25px rgba(255, 0, 255, 0.7);
 }
 
 .footer-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 0;
   margin: 0;
 }
@@ -204,10 +239,13 @@ footer.footer {
 .footer-links li a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   transition: color 0.25s ease;
+  text-shadow: 0 0 6px white;
 }
 
 .footer-links li a:hover {
-  color: var(--intel-accent);
+  color: var(--neon-green);
+  text-shadow: 0 0 12px var(--neon-green);
 }
