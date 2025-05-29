@@ -1,16 +1,17 @@
-/* Intel Sustainability Journey - Neon Futuristic Design */
+/* Intel Neon Futuristic Style - Intel Brand Colors */
 
 :root {
-  --background-dark: #0b0f1a;
-  --neon-blue: #00ffff;
-  --neon-pink: #ff00ff;
-  --neon-green: #39ff14;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --glass-blur: 12px;
-  --text-light: #e0e7ff;
-  --shadow-glow: rgba(0, 255, 255, 0.3);
-  --shadow-glow-pink: rgba(255, 0, 255, 0.3);
-  --shadow-glow-green: rgba(57, 255, 20, 0.3);
+  --background-dark: #0a1e3a;       /* Dark navy-blue */
+  --intel-blue: #0071c5;            /* Intel signature blue */
+  --intel-light-blue: #00aaff;      /* Bright cyan-blue */
+  --intel-green: #00d27a;           /* Bright green accent */
+  --intel-purple: #6c4fff;          /* Purple accent for creativity */
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --glass-blur: 14px;
+  --text-light: #d9e8ff;
+  --shadow-glow-blue: rgba(0, 113, 197, 0.4);
+  --shadow-glow-green: rgba(0, 210, 122, 0.4);
+  --shadow-glow-purple: rgba(108, 79, 255, 0.3);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rubik+Distressed&display=swap');
@@ -28,17 +29,17 @@ body {
   position: relative;
   padding: 7rem 2rem 5rem;
   text-align: center;
-  background: linear-gradient(135deg, #001122, #003344);
+  background: linear-gradient(135deg, #00254d, #004a8f);
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-  box-shadow: 0 0 30px var(--neon-blue);
+  box-shadow: 0 0 30px var(--intel-blue);
 }
 
 .logo {
   width: 110px;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 8px var(--neon-pink));
-  animation: pulseNeon 3s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 8px var(--intel-light-blue));
+  animation: pulseGlow 3s ease-in-out infinite alternate;
 }
 
 .hero-text h1 {
@@ -47,11 +48,11 @@ body {
   font-size: 3.5rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--neon-pink);
+  color: var(--intel-purple);
   text-shadow:
-    0 0 8px var(--neon-pink),
-    0 0 20px var(--neon-pink),
-    0 0 30px var(--neon-pink);
+    0 0 8px var(--intel-purple),
+    0 0 20px var(--intel-purple),
+    0 0 30px var(--intel-purple);
   margin-bottom: 0.25rem;
   user-select: text;
 }
@@ -61,8 +62,8 @@ body {
   font-size: 1.4rem;
   max-width: 600px;
   margin: 0 auto;
-  color: var(--neon-blue);
-  text-shadow: 0 0 6px var(--neon-blue);
+  color: var(--intel-light-blue);
+  text-shadow: 0 0 6px var(--intel-light-blue);
   user-select: text;
 }
 
@@ -71,12 +72,12 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 2rem;
   margin: 3rem auto;
   max-width: 1250px;
   backdrop-filter: blur(var(--glass-blur));
-  box-shadow: 0 0 40px var(--shadow-glow);
+  box-shadow: 0 0 40px var(--shadow-glow-blue);
 }
 
 .timeline {
@@ -93,11 +94,11 @@ body {
   scroll-snap-align: start;
   min-width: auto;
   border-radius: 1.75rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--card-bg);
   backdrop-filter: blur(var(--glass-blur));
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow:
-    0 0 20px var(--shadow-glow),
+    0 0 20px var(--shadow-glow-blue),
     inset 0 0 10px rgba(255, 255, 255, 0.1);
   transition: box-shadow 0.4s ease;
   cursor: pointer;
@@ -105,8 +106,8 @@ body {
 
 .milestone:hover {
   box-shadow:
-    0 0 40px var(--neon-green),
-    inset 0 0 15px rgba(57, 255, 20, 0.2);
+    0 0 40px var(--intel-green),
+    inset 0 0 15px rgba(0, 210, 122, 0.2);
   transform: scale(1.05);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -145,18 +146,18 @@ body {
 .card-content h3 {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
-  color: var(--neon-pink);
+  color: var(--intel-purple);
   margin-bottom: 0.8rem;
   letter-spacing: 0.06em;
-  text-shadow: 0 0 10px var(--neon-pink);
+  text-shadow: 0 0 10px var(--intel-purple);
 }
 
 .card-content p {
   font-family: 'Rubik Distressed', cursive;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--neon-blue);
-  text-shadow: 0 0 6px var(--neon-blue);
+  color: var(--intel-light-blue);
+  text-shadow: 0 0 6px var(--intel-light-blue);
   flex-grow: 1;
 }
 
@@ -166,20 +167,20 @@ body {
   transition: max-height 0.6s ease;
   font-size: 1rem;
   margin-top: 1rem;
-  color: var(--neon-green);
-  text-shadow: 0 0 8px var(--neon-green);
+  color: var(--intel-green);
+  text-shadow: 0 0 8px var(--intel-green);
 }
 
 .milestone:hover .details {
   max-height: 220px;
 }
 
-@keyframes pulseNeon {
+@keyframes pulseGlow {
   0% {
-    filter: drop-shadow(0 0 6px var(--neon-pink));
+    filter: drop-shadow(0 0 6px var(--intel-light-blue));
   }
   100% {
-    filter: drop-shadow(0 0 18px var(--neon-pink));
+    filter: drop-shadow(0 0 18px var(--intel-light-blue));
   }
 }
 
@@ -214,7 +215,7 @@ body {
 }
 
 footer.footer {
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+  background: linear-gradient(135deg, var(--intel-purple), var(--intel-blue));
   padding: 2rem 2.5rem;
   color: white;
   font-family: 'Orbitron', sans-serif;
@@ -225,7 +226,7 @@ footer.footer {
   font-size: 1rem;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
-  box-shadow: 0 -8px 25px rgba(255, 0, 255, 0.7);
+  box-shadow: 0 -8px 25px rgba(108, 79, 255, 0.7);
 }
 
 .footer-links {
@@ -246,6 +247,7 @@ footer.footer {
 }
 
 .footer-links li a:hover {
-  color: var(--neon-green);
-  text-shadow: 0 0 12px var(--neon-green);
+  color: var(--intel-green);
+  text-shadow: 0 0 12px var(--intel-green);
 }
+
