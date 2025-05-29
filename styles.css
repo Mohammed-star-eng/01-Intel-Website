@@ -2,13 +2,14 @@
 
 :root {
   --intel-blue: #0071c5;
+  --intel-blue-soft: #6aaedf;
   --sustain-green: #2e8b57;
   --light-sky: #e6f3f9;
   --bright-green: #6fbf73;
   --highlight-yellow: #ffd700;
   --text-color: #1a1a1a;
   --white: #ffffff;
-  --bg-gradient: linear-gradient(90deg, var(--intel-blue) 50%, var(--sustain-green) 50%);
+  --bg-gradient: linear-gradient(90deg, var(--intel-blue) 0%, var(--intel-blue-soft) 100%);
   --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --transition-speed: 0.3s;
 }
@@ -104,7 +105,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 113, 197, 0.35);
+  background: rgba(0, 50, 100, 0.55);
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 0;
@@ -130,7 +131,7 @@ body {
   font-size: 3.5rem;
   margin-bottom: 0.75rem;
   font-weight: 900;
-  color: var(--highlight-yellow);
+  color: var(--white);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   line-height: 1.1;
 }
@@ -144,7 +145,7 @@ body {
 
 /* === Timeline Section === */
 .timeline-container {
-  background: var(--white);
+  background: #f4f9fc;
   padding: 4rem 2rem 6rem;
 }
 
