@@ -1,7 +1,7 @@
 /* Intel Sustainability Journey - Professional Theme */
 
 :root {
-  --intel-blue: #004a87;
+  --intel-blue: #0068b5; /* Slightly lighter than previous but richer than original */
   --intel-blue-soft: #1c75bc;
   --sustain-green: #2e8b57;
   --light-sky: #e6f3f9;
@@ -92,8 +92,8 @@ body {
 /* === Hero Section === */
 .hero {
   position: relative;
-  min-height: 95vh;
-  padding: 10rem 2rem 6rem;
+  min-height: 80vh; /* Reduced from 95vh to feel more natural */
+  padding: 8rem 2rem 5rem;
   text-align: center;
   background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
   color: var(--white);
@@ -129,7 +129,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3.75rem;
+  font-size: 3.5rem;
   margin-bottom: 0.75rem;
   font-weight: 900;
   color: var(--white);
@@ -138,7 +138,7 @@ body {
 }
 
 .hero-text p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--white);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   margin: 0 auto;
