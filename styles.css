@@ -1,7 +1,7 @@
 /* Intel Sustainability Journey - Professional Theme */
 
 :root {
-  --intel-blue: #0068b5; /* Slightly lighter than previous but richer than original */
+  --intel-blue: #0071c5; /* Refined Intel Blue for smoother, authentic flow */
   --intel-blue-soft: #1c75bc;
   --sustain-green: #2e8b57;
   --light-sky: #e6f3f9;
@@ -92,7 +92,7 @@ body {
 /* === Hero Section === */
 .hero {
   position: relative;
-  min-height: 80vh; /* Reduced from 95vh to feel more natural */
+  min-height: 88vh; /* Slightly smaller than full but larger than before */
   padding: 8rem 2rem 5rem;
   text-align: center;
   background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
@@ -100,13 +100,14 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border-radius: 0;
+  background-color: var(--intel-blue);
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 45, 95, 0.85);
+  background: rgba(0, 113, 197, 0.85);
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 0;
@@ -152,6 +153,27 @@ body {
   position: relative;
 }
 
+.timeline-container::before,
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.timeline-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f4f9fc 0%, transparent 100%);
+}
+
+.timeline-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f4f9fc 0%, transparent 100%);
+}
+
 .timeline {
   display: flex;
   flex-wrap: nowrap;
@@ -175,14 +197,21 @@ body {
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 10;
+  transition: background var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
 }
 
 .timeline-nav.left {
-  left: 0;
+  left: 10px;
 }
 
 .timeline-nav.right {
-  right: 0;
+  right: 10px;
+}
+
+.timeline-nav:hover {
+  background: var(--intel-blue-soft);
 }
 
 .milestone {
