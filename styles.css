@@ -40,7 +40,7 @@ body {
 }
 
 .nav-logo {
-  width: 60px;
+  width: 100px;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.75));
   transition: filter var(--transition-speed) ease;
 }
@@ -281,7 +281,7 @@ body {
 /* === Footer === */
 footer.footer {
   background: var(--intel-blue);
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   color: var(--white);
   display: flex;
   flex-wrap: wrap;
