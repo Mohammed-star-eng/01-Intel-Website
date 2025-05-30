@@ -27,7 +27,11 @@ body {
 
 /* === Navbar === */
 .navbar {
-  background: var(--intel-blue); /* Restore blue background */
+  background: linear-gradient(
+    to right,
+    #f5f5f5 0 120px,      /* Light gray for the logo area (adjust 120px as needed) */
+    var(--intel-blue) 120px 100%
+  );
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -49,13 +53,6 @@ body {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
 }
 
-.nav-logo-bg {
-  background: #f5f5f5; /* Very light gray for logo area */
-  padding: 0.5rem 1rem;
-  border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-}
 
 .nav-links {
   list-style: none;
