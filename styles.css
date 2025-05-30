@@ -40,7 +40,7 @@ body {
 }
 
 .nav-logo {
-  width: 120px;
+  width: 100px;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.75));
   transition: filter var(--transition-speed) ease;
 }
