@@ -95,7 +95,7 @@ body {
   min-height: 65vh; /* Slightly smaller than full but larger than before */
   padding: 8rem 2rem 5rem;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+  background: url('img/green_computing.avif') no-repeat center/cover;
   color: var(--white);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   overflow: hidden;
