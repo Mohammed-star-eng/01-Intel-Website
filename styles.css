@@ -100,7 +100,7 @@ body {
 /* === Hero Section === */
 .hero {
   position: relative;
-  min-height: 65vh; /* Slightly smaller than full but larger than before */
+  min-height: 70vh; /* Slightly smaller than full but larger than before */
   padding: 8rem 2rem 5rem;
   text-align: center;
   background: url('img/green_computing.avif') no-repeat center/cover;
