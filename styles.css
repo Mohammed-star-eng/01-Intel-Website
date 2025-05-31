@@ -162,9 +162,7 @@ html {
 .timeline-container {
   background: #f4f9fcdd;
   padding: 4rem 2rem 6rem;
-  max-width: calc(4 * 300px + 3 * 2.5rem); /* 4 cards + 3 gaps */
-  margin: 0 auto;
-  overflow-x: auto; /* Allow horizontal scroll for timeline */
+  overflow-x: auto;
   position: relative;
 }
 
