@@ -196,7 +196,7 @@ html {
   justify-content: center;
   max-width: 1280px;
   min-width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll at page bottom */
+  overflow-x: auto; /* Allow horizontal scroll for cards */
   padding-bottom: 1rem;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
