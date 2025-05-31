@@ -261,33 +261,23 @@ html {
 
 .card-content {
   padding: 1.75rem 1.5rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-.card-content h3 {
-  color: var(--intel-blue);
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.card-content p,
-.details {
-  color: var(--text-color);
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
+/* Move .details overlay to be a direct child of .card and cover the whole card */
 .details {
   margin-top: 0;
   position: absolute;
   inset: 0;
   background: rgba(30, 50, 80, 0.92); /* Slightly darker overlay */
   color: #ffffffe7; /* Make text pure white for visibility */
-  z-index: 2;
+  z-index: 3; /* Above everything in .card */
   padding: 2rem 1.5rem 2rem;
   border-radius: 1.25rem;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -303,13 +293,6 @@ html {
   display: flex;
   opacity: 1;
   pointer-events: auto;
-}
-
-/* Optional: Hide the original description area margin when overlay is shown */
-.card-content {
-  /* ...existing code... */
-  position: relative;
-  z-index: 1;
 }
 
 /* === Footer === */
