@@ -502,3 +502,38 @@ footer.footer {
     gap: 0.3rem;
   }
 }
+/* --- Enhanced Scroll Snap Fixes --- */
+
+/* Ensure .timeline container fully utilizes scroll snapping */
+.timeline-container {
+  scroll-padding-left: 2rem;
+  scroll-padding-right: 2rem;
+}
+
+/* Prevent slight misalignment on snap due to flex gaps */
+.timeline {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 1rem; /* Add padding to align edge elements cleanly */
+  padding-inline: 1rem; /* Match scroll-padding for visual consistency */
+}
+
+/* Improve snap precision and cross-browser compatibility */
+.milestone {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/* On mobile, enhance vertical snapping consistency */
+@media (max-width: 768px) {
+  .timeline {
+    scroll-snap-type: y mandatory;
+    scroll-padding: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .milestone {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
