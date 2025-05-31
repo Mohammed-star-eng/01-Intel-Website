@@ -401,6 +401,10 @@ footer.footer {
     width: 100%;
   }
 
+  .hero {
+    margin-top: 90px; /* Add space below fixed navbar on mobile */
+  }
+
   .hero-text h1 {
     font-size: 2.5rem;
   }
