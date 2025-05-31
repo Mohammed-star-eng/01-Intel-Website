@@ -198,8 +198,11 @@ html {
   overflow-x: auto; /* Keep this! */
   padding-bottom: 1rem;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--intel-blue) #e6f3f9;
+  scrollbar-width: none; /* Firefox */
+}
+
+.timeline::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .milestone {
@@ -496,20 +499,13 @@ footer.footer {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;   /* Increase space above dots */
+  height: 48px;          /* Increase height of the indicator bar */
+  align-items: center;
 }
 .timeline-indicators .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #b3d6f6;
-  transition: background 0.3s, transform 0.3s;
-  box-shadow: 0 2px 8px rgba(0,113,197,0.08);
-}
-.timeline-indicators .dot.active {
-  background: var(--highlight-yellow);
-  transform: scale(1.25);
-  box-shadow: 0 0 0 4px #fffbe6, 0 2px 8px rgba(0,113,197,0.18);
+  width: 18px;           /* Make dots bigger if you want */
+  height: 18px;
 }
 
 /* Responsive: keep snapping vertical on mobile */
@@ -533,8 +529,9 @@ footer.footer {
     width: 90vw;
     max-width: 320px;
     min-width: 220px;
-    margin-left: 0;
-    margin-right: 0;
+    height: 400px;
+    max-height: 400px;
+    min-height: 400px;
   }
 }
 
