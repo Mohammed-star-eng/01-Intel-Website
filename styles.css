@@ -278,9 +278,13 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: space-between;
   text-align: center;
+  color: #fff; /* Use pure white for best contrast */
+  font-style: normal;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
   transition: opacity 0.25s;
   opacity: 0;
   pointer-events: none;
@@ -293,6 +297,26 @@ html {
   display: flex;
   opacity: 1;
   pointer-events: auto;
+}
+
+.details p {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: #fff; /* Ensure both paragraphs are white */
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45); /* Add shadow for readability */
+}
+
+.details p:first-child {
+  align-self: flex-start;
+  margin-bottom: auto;
+  padding-top: 0.5rem;
+}
+
+.details p:last-child {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-bottom: 0.5rem;
 }
 
 /* === Footer === */
