@@ -413,10 +413,16 @@ footer.footer {
     align-items: center; /* Center cards horizontally */
   }
 
-  .milestone {
-    scroll-snap-align: center;
-    width: 100%;
-    max-width: 400px;
+  .milestone,
+  .card {
+    width: 90vw;
+    max-width: 320px;
+    min-width: 220px;
+    height: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   footer.footer {
@@ -512,16 +518,11 @@ footer.footer {
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
-    align-items: center; /* This centers the cards horizontally */
+    align-items: center; /* Center cards horizontally */
     scroll-snap-type: y mandatory;
     gap: 2rem;
     overflow-x: unset;
     overflow-y: auto;
-  }
-  .milestone {
-    scroll-snap-align: center;
-    width: 100%;
-    max-width: 400px;
   }
 
   .milestone,
@@ -532,6 +533,8 @@ footer.footer {
     height: 400px;
     max-height: 400px;
     min-height: 400px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
