@@ -27,6 +27,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* === Navbar === */
@@ -163,7 +164,7 @@ html {
   padding: 4rem 2rem 6rem;
   max-width: calc(4 * 300px + 3 * 2.5rem); /* 4 cards + 3 gaps */
   margin: 0 auto;
-  overflow-x: auto;
+  overflow-x: hidden; /* Prevent horizontal scroll at page bottom */
   position: relative;
 }
 
@@ -195,7 +196,7 @@ html {
   justify-content: center;
   max-width: 1280px;
   min-width: 100%;
-  overflow-x: auto; /* Keep this! */
+  overflow-x: hidden; /* Prevent horizontal scroll at page bottom */
   padding-bottom: 1rem;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
