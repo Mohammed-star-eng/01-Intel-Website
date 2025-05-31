@@ -189,7 +189,7 @@ html {
 .timeline {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1.2rem;              /* Decreased gap between cards */
+  gap: 1rem;              /* Decreased gap between cards */
   justify-content: flex-start;
   max-width: 1280px;        /* Show 4 cards at a time if each is 300px */
   min-width: 100%;
@@ -203,14 +203,14 @@ html {
 .milestone {
   scroll-snap-align: center;
   flex-shrink: 0;
-  width: 290px;             /* Decreased card width */
+  width: 250px;             /* Decreased card width */
   transition: box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.4s cubic-bezier(0.4,0,0.2,1);
   position: relative;
 }
 
 /* Highlight the card when it's centered (active) */
 .milestone.active .card {
-  box-shadow: 0 0 0 4px var(--highlight-yellow), 0 12px 28px rgba(0, 113, 197, 0.25);
+  box-shadow: 0 0 0 4px var(--highlight-yellow), 0 12px 28px rgba(13, 122, 205, 0.333);
   transform: scale(1.04);
   z-index: 2;
   transition: box-shadow 0.4s, transform 0.4s;
@@ -234,7 +234,7 @@ html {
   left: 0;
   width: 100%;
   height: 180px; /* Match image height */
-  background: rgba(30, 50, 80, 0.32); /* Subtle by default */
+  background: rgba(0, 113, 197, 1); /* Subtle by default */
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
   z-index: 1;
