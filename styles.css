@@ -223,14 +223,29 @@ html {
   overflow: hidden;
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   cursor: default;
-  position: relative; /* Needed for absolute positioning of overlay */
+  position: relative; /* Needed for overlay */
 }
 
-.card:hover,
-.card:focus-within {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 113, 197, 0.25);
-  cursor: pointer;
+/* Add overlay for image darkening */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px; /* Match image height */
+  background: rgba(30, 50, 80, 0.32); /* Subtle by default */
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.card:hover::before,
+.card:focus-within::before {
+  opacity: 1;
 }
 
 .card img {
@@ -240,6 +255,8 @@ html {
   display: block;
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
+  position: relative;
+  z-index: 0;
 }
 
 .card-content {
