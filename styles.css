@@ -422,6 +422,11 @@ footer.footer {
   .card {
     width: 100%;
   }
+
+  .timeline-container::before,
+  .timeline-container::after {
+    display: none;
+  }
 }
 
 /* === Timeline Scroll Snap Enhancement === */
