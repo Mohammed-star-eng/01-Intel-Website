@@ -238,6 +238,7 @@ html {
   overflow: hidden;
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   cursor: default;
+  position: relative; /* Needed for absolute positioning of overlay */
 }
 
 .card:hover,
@@ -279,13 +280,37 @@ html {
   opacity: 0.85;
   font-style: italic;
   font-size: 0.9rem;
-  color: #3a3a3a;
-  display: none; /* Hide by default */
+  color: #f4f4f4;
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 50, 80, 0.92); /* Slightly darker overlay */
+  color: #f4f4f4;
+  z-index: 2;
+  padding: 2rem 1.5rem 2rem;
+  border-radius: 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.25s;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .card:hover .details,
 .card:focus-within .details {
-  display: block; /* Show on hover/focus */
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Optional: Hide the original description area margin when overlay is shown */
+.card-content {
+  /* ...existing code... */
+  position: relative;
+  z-index: 1;
 }
 
 /* === Footer === */
