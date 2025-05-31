@@ -50,6 +50,7 @@ html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 0;
   min-height: 72px; /* Ensure consistent height for offset */
+  box-sizing: border-box; /* Ensure padding does not cause overflow */
 }
 
 .nav-logo {
