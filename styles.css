@@ -405,9 +405,11 @@ footer.footer {
     gap: 2rem;
     overflow-x: unset;
     overflow-y: auto; /* Only vertical scroll on mobile */
+    align-items: center; /* Center cards horizontally */
   }
 
   .milestone {
+    scroll-snap-align: center;
     width: 100%;
     max-width: 400px;
   }
@@ -499,6 +501,7 @@ footer.footer {
     gap: 2rem;
     overflow-x: unset;
     overflow-y: auto;
+    align-items: center; /* Center cards horizontally */
   }
   .milestone {
     scroll-snap-align: center;
