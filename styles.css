@@ -283,8 +283,8 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start; /* or center */
+  align-items: center;      /* Center horizontally */
+  justify-content: center;  /* Center vertically */
   text-align: center;
   color: #fff; /* Use pure white for best contrast */
   font-style: normal;
