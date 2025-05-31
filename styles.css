@@ -161,7 +161,7 @@ html {
 .timeline-container {
   background: #f4f9fcdd;
   padding: 4rem 2rem 6rem;
-  overflow-x: auto;
+  /* Remove or comment out overflow-x: auto; */
   position: relative;
 }
 
@@ -189,11 +189,11 @@ html {
 .timeline {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1rem;              /* Decreased gap between cards */
+  gap: 1rem;
   justify-content: flex-start;
-  max-width: 1280px;        /* Show 4 cards at a time if each is 300px */
+  max-width: 1280px;
   min-width: 100%;
-  overflow-x: auto;
+  overflow-x: auto; /* Keep this! */
   padding-bottom: 1rem;
   scroll-behavior: smooth;
   scrollbar-width: thin;
@@ -395,9 +395,16 @@ footer.footer {
     margin: 0 auto 0.3rem auto; /* Reduced bottom margin for mobile */
   }
 
+  .timeline-container {
+    overflow-x: unset; /* Make sure no horizontal scrollbar here */
+    overflow-y: unset;
+  }
   .timeline {
     flex-direction: column;
-    align-items: center;
+    scroll-snap-type: y mandatory;
+    gap: 2rem;
+    overflow-x: unset;
+    overflow-y: auto; /* Only vertical scroll on mobile */
   }
 
   .milestone {
