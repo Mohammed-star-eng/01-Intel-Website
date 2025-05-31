@@ -471,7 +471,7 @@ footer.footer {
 
 /* Custom scrollbar for timeline */
 .timeline::-webkit-scrollbar {
-  height: 32px; /* Increased from 24px to 32px */
+  height: 48px; /* Increased from 32px to 48px */
 }
 .timeline::-webkit-scrollbar-thumb {
   background: linear-gradient(90deg, var(--intel-blue) 60%, var(--highlight-yellow) 100%);
