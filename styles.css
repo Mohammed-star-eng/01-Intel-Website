@@ -278,16 +278,11 @@ html {
 }
 
 .details {
-  margin-top: 1.25rem;
-  opacity: 0.85;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #f4f4f4;
-  display: none;
+  margin-top: 0;
   position: absolute;
   inset: 0;
   background: rgba(30, 50, 80, 0.92); /* Slightly darker overlay */
-  color: #f4f4f4;
+  color: #ffffffe7; /* Make text pure white for visibility */
   z-index: 2;
   padding: 2rem 1.5rem 2rem;
   border-radius: 1.25rem;
@@ -299,6 +294,8 @@ html {
   transition: opacity 0.25s;
   opacity: 0;
   pointer-events: none;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 .card:hover .details,
