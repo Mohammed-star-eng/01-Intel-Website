@@ -329,6 +329,12 @@ footer.footer {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 1.5rem;
+    /* Override background for mobile: light gray at top, blue below */
+    background: linear-gradient(
+      to bottom,
+      #f5f5f5d3 0 60px,      /* Light gray for the top bar (height ~logo) */
+      var(--intel-blue) 60px 100%
+    );
   }
 
   .nav-links {
