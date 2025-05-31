@@ -203,7 +203,7 @@ html {
 .milestone {
   scroll-snap-align: center;
   flex-shrink: 0;
-  width: 250px;             /* Decreased card width */
+  width: 180px;             /* Decrease card width */
   transition: box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.4s cubic-bezier(0.4,0,0.2,1);
   position: relative;
 }
@@ -233,7 +233,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 180px; /* Match image height */
+  height: 260px; /* Increase card/image/overlay height */
   background: rgba(0, 113, 197, 1); /* Subtle by default */
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
@@ -250,7 +250,7 @@ html {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 260px; /* Increase card/image/overlay height */
   object-fit: cover;
   display: block;
   border-top-left-radius: 1.25rem;
