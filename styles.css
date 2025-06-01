@@ -223,6 +223,12 @@ html {
   transition: box-shadow 0.4s, transform 0.4s;
 }
 
+/* Combine active and hover/focus for additive transform */
+.milestone.active .card:hover,
+.milestone.active .card:focus-within {
+  transform: translateY(-8px) scale(1.07); /* 1.04 * 1.03 ≈ 1.07 */
+}
+
 .card {
   background: var(--light-sky);
   border-radius: 1.25rem;
