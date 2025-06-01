@@ -228,7 +228,9 @@ html {
   border-radius: 1.25rem;
   box-shadow: 0 4px 15px rgba(0, 113, 197, 0.1);
   overflow: hidden;
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: 
+    transform var(--transition-speed) cubic-bezier(0.4,0,0.2,1), 
+    box-shadow var(--transition-speed) cubic-bezier(0.4,0,0.2,1);
   cursor: default;
   position: relative; /* Needed for overlay */
 }
@@ -649,4 +651,9 @@ footer.footer {
 
 html, body {
   overflow-x: hidden;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px) scale(1.03);
 }
