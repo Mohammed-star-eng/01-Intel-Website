@@ -463,6 +463,10 @@ footer.footer {
     margin-left: 0;
     margin-right: 0;
   }
+
+  .nav-logo {
+    margin-top: -8px; /* Move logo slightly higher on mobile */
+  }
 }
 
 @media (min-width: 769px) {
